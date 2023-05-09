@@ -1,0 +1,128 @@
+@font-face {
+    font-family: Quicksand;
+    src: url(/fonts/Quicksand-VariableFont_wght.ttf);
+}
+@font-face{    
+    font-family: Josefin;
+    src: url(/fonts/JosefinSlab-VariableFont_wght.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: Josefin,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: rgb(33, 6, 70);
+}
+
+hgroup {
+    font-family: Quicksand, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: xx-large;
+    text-align: center;
+}
+
+header {
+    width: 100%;
+    height: 70vh;
+    background: url(/images/hotel-bg.jpeg) fixed center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #eee;
+}
+
+section {
+    display: flex
+}
+
+nav section {
+    justify-content: space-around;
+    padding: 1.5rem;
+    font-size: larger;
+    color: #d251b4;
+}
+/* 
+.gallery div {
+    width: 120px;
+    height: 120px;
+    background-color: #4d0255;
+    color: darkgray;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+
+article {
+    color: #7198c3;
+    padding: 1.5rem;
+}
+
+aside {
+    background-color: #7d1d67;
+    color: #7198c3;
+    padding: 1.5rem;
+    width: 30%;
+    
+}
+
+footer {
+    font-family: Quicksand, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20pt;
+    padding: 20pt;
+    text-align: center;
+    color: #7d1d67;
+    background-color: rgb(33, 6, 70);
+}
+
+nav {
+    background: rgb(33, 6, 70);
+    position: fixed;
+    width: 100%;
+}
+
+nav a {   
+    color: aqua;
+}
+
+body.home header {
+    color: #333;
+}
+
+body.home article {
+    width: 70%;
+}
+
+body.register header {
+    background-image: url(/images/tokyo_backalley.jpg);
+}
+
+body.about header {
+    background-image: url(/images/geisha.jpg);
+}
+
+body.gallery header {
+    background-image: url(/images/gallery_road.jpeg);
+}
+
+main{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 150px 150px;
+    text-align: center;
+    line-height: 100px;
+    padding: 15px 15px 0px 15px;
+    font-size: x-large;
+    font-family: Quicksand;
+}
+
+main article {
+    border-radius: 10px;
+    background-color: #7d1d67;
+}
