@@ -39,24 +39,29 @@ section {
     display: flex
 }
 
+nav {
+    background: rgb(33, 6, 70);
+    position: fixed;
+    width: 100%;
+}
+
 nav section {
     justify-content: space-around;
     padding: 1.5rem;
+    font-family: Quicksand;
     font-size: larger;
     color: #d251b4;
 }
-/* 
-.gallery div {
-    width: 120px;
-    height: 120px;
-    background-color: #4d0255;
-    color: darkgray;
-    padding: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
 
+nav section a {   
+    color: aqua;
+    transition: 200ms color linear, 200ms font-weight ease-in;
+}
+
+nav section a:hover {
+    color: #d251b4;
+    font-weight: bold;
+}
 
 article {
     color: #7198c3;
@@ -78,16 +83,6 @@ footer {
     text-align: center;
     color: #7d1d67;
     background-color: rgb(33, 6, 70);
-}
-
-nav {
-    background: rgb(33, 6, 70);
-    position: fixed;
-    width: 100%;
-}
-
-nav a {   
-    color: aqua;
 }
 
 body.home header {
