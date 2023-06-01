@@ -2,7 +2,8 @@
     font-family: Quicksand;
     src: url(../fonts/Quicksand-VariableFont_wght.ttf);
 }
-@font-face{    
+
+@font-face {
     font-family: Josefin;
     src: url(../fonts/JosefinSlab-VariableFont_wght.ttf);
 }
@@ -12,15 +13,30 @@
     margin: 0;
 }
 
-body{
-    font-family: Josefin,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+body {
+    font-family: Josefin, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background: rgb(33, 6, 70);
+}
+
+@keyframes opacity-fade-in {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
 }
 
 hgroup {
     font-family: Quicksand, Verdana, Geneva, Tahoma, sans-serif;
-    font-size: xx-large;
+    font-size: 20pt;
     text-align: center;
+    color: #ffffff;
+    animation-name: opacity-fade-in;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+}
+
+@media screen and (min-width: 480px) {
+    hgroup {
+        font-size: 35pt;
+    }
 }
 
 header {
@@ -53,7 +69,7 @@ nav section {
     color: #d251b4;
 }
 
-nav section a {   
+nav section a {
     color: aqua;
     transition: 200ms color linear, 200ms font-weight ease-in;
 }
@@ -73,7 +89,7 @@ aside {
     color: #7198c3;
     padding: 1.5rem;
     width: 30%;
-    
+
 }
 
 footer {
@@ -85,12 +101,17 @@ footer {
     background-color: rgb(33, 6, 70);
 }
 
-body.home header {
-    color: #333;
+@keyframes inverted-fade-in {
+    from {background-color: white; color: black;}
+    to {background-color: black; color: white;}
+}
+
+body.home hgroup {
+    animation: inverted-fade-in 2s -2s 2 alternate forwards;
 }
 
 body.home article {
-    width: 70%;
+    width: 70%;   
 }
 
 body.register header {
@@ -105,10 +126,9 @@ body.gallery header {
     background-image: url(../images/gallery_road.jpeg);
 }
 
-main{
-    display: grid;
+main {  
     gap: 20px;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 150px 150px 150px 150px;
     grid-template-rows: 150px 150px;
     text-align: center;
     line-height: 100px;
@@ -120,4 +140,16 @@ main{
 main article {
     border-radius: 10px;
     background-color: #7d1d67;
+    margin-bottom: 5px;
+}
+
+@media screen and (min-width: 720px) {
+    main {
+        display: grid;
+        justify-content: center;
+    }
+
+    main article {
+        margin-bottom: 0px;
+    }
 }
